@@ -16,16 +16,12 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        
-        indices = []
-        
+
 # loop through nums list
-        for i in nums:
-# if target - i = another element in the nums list, append [i] to indices list 
-            if target - i == (something):
-                indices.append(index-of-i)
-                indices.append(index-of-other-element)
-                return indices
-# condition isn't met with any of the elements, return None
-            else:
-                return None
+        for sum1 in range(len(nums)):
+            for sum2 in range(sum1+1, len(nums)):
+                if nums[sum1] + nums[sum2] == target:
+                    return [sum1, sum2]
+        # condition isn't met with any of the elements, return None
+                else:
+                    return None
